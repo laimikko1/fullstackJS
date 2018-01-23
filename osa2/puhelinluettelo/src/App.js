@@ -47,7 +47,8 @@ class App extends React.Component {
             const persons = this.state.persons.concat(newName)
             this.setState({
                 persons,
-                newName: ''
+                newName: '',
+                newNumber: ''
             })
         }
 
@@ -80,7 +81,7 @@ class App extends React.Component {
                         <button type="submit">lisää</button>
                     </div>
                 </form>
-                <h2>numbert</h2>
+                <h2>Numerot</h2>
                 <Persons persons={this.state.persons} filter={this.state.filter} />
             </div>
         )
