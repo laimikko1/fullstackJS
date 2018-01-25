@@ -20,6 +20,10 @@ class App extends React.Component {
       })
   }
 
+  filterWithClick = (data, event) => {
+    this.setState({filter: data})
+}
+
   filterCountries = (event) => {
     this.setState({ filter: event.target.value })
   }
@@ -34,7 +38,7 @@ class App extends React.Component {
           />
         </div>
         <div>
-          <Countries key={this.state.countries.length} countries={this.state.countries} filter={this.state.filter} />
+          <Countries countries={this.state.countries} filter={this.state.filter} onClick={this.filterWithClick} />
         </div>
       </div>
     )
