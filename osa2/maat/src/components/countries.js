@@ -3,6 +3,7 @@ import Country from './country'
 
 const Countries = ({ filter, countries, onClick }) => {
     let list = countries.filter(country => country.name.toLowerCase().includes(filter.toLowerCase()));
+    
     if (list.length === 1) {
         return (
             <div>
@@ -11,15 +12,13 @@ const Countries = ({ filter, countries, onClick }) => {
         )
     }
 
-    const noCountryForOldMen = [{
-        name: 'too many countries to match, specify another filter',
-        alpha2Code: '123456'
-    }]
-    
-    list.length > 10 ?
-        list = noCountryForOldMen :
-        list;
-
+    else if (list.length > 10) {
+        return (
+            <div>
+                too many countries to match, specify another filter
+            </div>
+        )
+    }
     return (
         <div>
             {list.map(country => <div onClick={(e) => onClick(country.name, e)} key={country.alpha2Code}>{country.name}</div>)}
