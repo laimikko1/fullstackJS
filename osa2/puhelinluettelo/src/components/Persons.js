@@ -11,7 +11,6 @@ const Persons = ({ persons, filter }) => {
 
     } else {
         const filtered = persons.filter(p => p.name.toLowerCase().includes(filter.toLowerCase()));
-        console.log(filtered)
         return (
             <div>
                 {filtered.map(p => <Person props={p} />)}

@@ -1,5 +1,5 @@
 {
-  "name": "puhelinluettelo",
+  "name": "maat",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,13 +7,13 @@
     "json-server": "^0.12.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0"
+    "react-scripts": "1.1.0",
+    "server": "json-server -p3001 db.json"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "server": "json-server -p3001 db.json"
+    "eject": "react-scripts eject"
   }
 }
