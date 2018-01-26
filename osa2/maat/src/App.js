@@ -21,7 +21,9 @@ class App extends React.Component {
   }
 
   filterWithClick = (data, event) => {
-    this.setState({filter: data})
+    return () => {
+      this.setState({filter: data})
+    }
 }
 
   filterCountries = (event) => {

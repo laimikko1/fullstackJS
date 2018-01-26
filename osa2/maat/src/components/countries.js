@@ -3,7 +3,7 @@ import Country from './country'
 
 const Countries = ({ filter, countries, onClick }) => {
     let list = countries.filter(country => country.name.toLowerCase().includes(filter.toLowerCase()));
-    
+
     if (list.length === 1) {
         return (
             <div>
@@ -21,7 +21,7 @@ const Countries = ({ filter, countries, onClick }) => {
     }
     return (
         <div>
-            {list.map(country => <div onClick={(e) => onClick(country.name, e)} key={country.alpha2Code}>{country.name}</div>)}
+            {list.map(country => <div onClick={onClick(country.name)} key={country.alpha2Code}>{country.name}</div>)}
         </div>
     )
 
