@@ -15,7 +15,7 @@ class App extends React.Component {
             newName: '',
             newNumber: '',
             filter: '',
-            error: null,
+            delete: null,
             success: null
         }
 
@@ -55,7 +55,7 @@ class App extends React.Component {
                     this.setState({ success: null })
                 }, 5000)
             })
-            .catch(error => {
+            .catch(rej => {
                 personService
                     .create(data)
                     .then(newPerson => {
@@ -119,10 +119,10 @@ class App extends React.Component {
                         const p = this.state.persons.filter(pers => pers.id !== id)
                         this.setState({
                             persons: p,
-                            error: 'Henkilö poistettu!'
+                            delete: 'Henkilö poistettu!'
                         })
                         setTimeout(() => {
-                            this.setState({ error: null })
+                            this.setState({ delete: null })
                         }, 5000)
                     })
 
@@ -135,7 +135,7 @@ class App extends React.Component {
             <div>
                 <h2>Puhelinluettelo</h2>
                 <Notification message={this.state.success} type={"success"} />
-                <Notification message={this.state.error} type={"error"} />
+                <Notification message={this.state.delete} type={"delete"} />
                 <div>
                     rajaa näytettäviä: <input
                         value={this.state.filter}
