@@ -1,0 +1,9 @@
+PUT http://localhost:3001/api/blogs/5a7c0ff550e1d14d59ba8fbd
+content-type: application/json
+
+{
+    "title": "Vegaaninen esimerkkiruokavalio, 2800 kcal",
+    "author": "Jussi Riekki",
+    "url": "http://puolikiloa.fi/vegaaninen-esimerkkiruokavalio-2800-kcal/",
+    "likes": 14
+}
