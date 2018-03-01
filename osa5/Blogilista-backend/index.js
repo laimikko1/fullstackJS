@@ -12,7 +12,7 @@ const loginRouter = require('./controllers/login')
 const config = require('./utils/config')
 require('dotenv').config()
 
-app.use(express.static('build'))
+
 app.use(cors())
 app.use(bodyParser.json())
 app.use(middleware.logger)

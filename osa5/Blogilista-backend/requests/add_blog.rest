@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/blogs
+content-type: application/json
+
+{
+    "title": "testiblogi xxx ilman käyttäjää3",
+    "author": "Rekka Riekki",
+    "url": "google.fi/"
+}
+
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1rb2UiLCJpZCI6IjVhODZmMjgxNDEwM2Y2NmY1YzFmZTQ2YyIsImlhdCI6MTUxODc5NDA2Mn0.XFua7eXbmvBUsjoStMO1WeQ50o8LmRSFz16qmr5kqIM
