@@ -1,3 +1,3 @@
 #!/bin/sh
 npm run build
-cp -r build ../FullStackJS/osa4
+cp -r build ../../osa4

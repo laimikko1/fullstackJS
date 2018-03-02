@@ -24,8 +24,7 @@ const reducer = (state = initialState, action) => {
       const filterd = state.find(an => an.id === action.data.id)
       const changed = { ...filterd, votes: filterd.votes + 1 }
       return state.map(an => an.id !== changed.id ? an : changed)
-
-      case 'NEW_ANECDOTE':
+    case 'NEW_ANECDOTE':
       const newA = asObject(action.data.content)
       return state.concat(newA)
   }

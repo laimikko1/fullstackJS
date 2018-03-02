@@ -45,7 +45,6 @@ class AnecdoteList extends React.Component {
     }
 
     sortVotes = (anecdotes) => {
-        console.log(`are wer here`);
         const sort = anecdotes.sort((a, b) =>
             b.votes - a.votes
         )
